@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
   
   var btn: TKTransitionSubmitButton!
   
+    @IBOutlet weak var login: TKTransitionSubmitButton!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -23,36 +25,37 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     btn = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
     btn.center = self.view.center
     btn.frame.bottom = self.view.frame.height - 60
-    btn.setTitle("Sign in", forState: .Normal)
+    btn.setTitle("Sign in", for: UIControlState())
     btn.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
-    btn.addTarget(self, action: #selector(ViewController.onTapButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+    btn.addTarget(self, action: #selector(ViewController.onTapButton(_:)), for: UIControlEvents.touchUpInside)
     self.view.addSubview(btn)
+    self.view.bringSubview(toFront: self.login)
 
   }
-  
-  @IBAction func onTapButton(button: TKTransitionSubmitButton) {
+
+  @IBAction func onTapButton(_ button: TKTransitionSubmitButton) {
     button.animate(1, completion: { () -> () in
-      let secondVC = TimerViewController()
+      let secondVC = self.storyboard!.instantiateViewController(withIdentifier: "timerView")
       secondVC.transitioningDelegate = self
-      self.presentViewController(secondVC, animated: true, completion: nil)
+      self.present(secondVC, animated: true, completion: nil)
     })
   }
 
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return UIStatusBarStyle.LightContent
-  }
-  
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
   // MARK: UIViewControllerTransitioningDelegate
-  func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     return TKFadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
   }
   
-  func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     return nil
   }
   

@@ -1,87 +1,95 @@
+//
+//  Copyright © 2014 Yalantis
+//  Licensed under the MIT license: http://opensource.org/licenses/MIT
+//  Latest version can be found at http://github.com/yalantis/Side-Menu.iOS
+//
 
 import UIKit
 
-public class MenuTransitionAnimator: NSObject {
+open class MenuTransitionAnimator: NSObject {
     //MARK: Public properties
-    @objc public enum Mode : Int { case Presentation, Dismissal }
+    @objc public enum Mode : Int { case presentation, dismissal }
     
     //MARK: Private properties
-    private let duration = 0.5
-    private let angle: CGFloat = 2
-    private var mode: Mode
-    private var shouldPassEventsOutsideMenu : Bool
-    private var tappedOutsideHandler : (() -> Void)?
+    fileprivate let duration = 0.5
+    fileprivate let angle: CGFloat = 2
+    fileprivate var mode: Mode
+    fileprivate var shouldPassEventsOutsideMenu : Bool
+    fileprivate var tappedOutsideHandler : (() -> Void)?
     
-    //MARK: Public methods
     public init(mode: Mode, shouldPassEventsOutsideMenu: Bool = true, tappedOutsideHandler: (() -> Void)? = nil) {
         self.mode = mode
         self.tappedOutsideHandler = tappedOutsideHandler
         self.shouldPassEventsOutsideMenu = shouldPassEventsOutsideMenu
         super.init()
     }
-    
-    //MARK: Private methods
-    private func animatePresentation(context: UIViewControllerContextTransitioning) {
-        let host = context.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let menu = context.viewControllerForKey(UITransitionContextToViewControllerKey)! 
+}
 
-        let view = menu.view
-        view.frame = CGRectMake(0, 0, menu.preferredContentSize.width, host.view.bounds.height)
-        view.autoresizingMask = [.FlexibleRightMargin, .FlexibleHeight]
-        view.translatesAutoresizingMaskIntoConstraints = true
-        
-        if shouldPassEventsOutsideMenu == true {
-            context.containerView()!.frame = view.frame
-        } else {
-            let tapButton = UIButton(frame: host.view.frame)
-            print(host.view.frame)
-            tapButton.backgroundColor = UIColor.clearColor()
-            tapButton.addTarget(self, action: #selector(menuTappedOutside), forControlEvents: .TouchUpInside)
-            context.containerView()!.addSubview(tapButton)
-        }
-        
-        context.containerView()!.addSubview(view)
-        
-        animateMenu(menu as! Menu, startAngle: angle, endAngle: 0) {
-            context.completeTransition(true)
-        }
-    }
+extension MenuTransitionAnimator {
     
-    @objc private func menuTappedOutside(sender: UIButton) {
-        print("1")
+    @objc fileprivate func menuTappedOutside(_ sender: UIButton) {
         if tappedOutsideHandler != nil {
             tappedOutsideHandler!()
         }
     }
+}
+
+extension MenuTransitionAnimator {
     
-    private func animateDismissal(context: UIViewControllerContextTransitioning) {
-        if let menu = context.viewControllerForKey(UITransitionContextFromViewControllerKey) {
-            animateMenu(menu as! Menu, startAngle: 0, endAngle: angle) {
+    fileprivate func animatePresentation(using context: UIViewControllerContextTransitioning) {
+        let host = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
+        let menu = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
+        
+        let view = menu.view!
+        view.frame = CGRect(x: 0, y: 0, width: menu.preferredContentSize.width, height: host.view.bounds.height)
+        view.autoresizingMask = [.flexibleRightMargin, .flexibleHeight]
+        view.translatesAutoresizingMaskIntoConstraints = true
+        
+        if shouldPassEventsOutsideMenu {
+            context.containerView.frame = view.frame
+        } else {
+            let tapButton = UIButton(frame: host.view.frame)
+            tapButton.backgroundColor = .clear
+            tapButton.addTarget(self, action: #selector(menuTappedOutside), for: .touchUpInside)
+            context.containerView.addSubview(tapButton)
+        }
+        
+        context.containerView.addSubview(view)
+        
+        animate(menu as! Menu, startAngle: angle, endAngle: 0) {
+            context.completeTransition(true)
+        }
+    }
+    
+    fileprivate func animateDismissal(using context: UIViewControllerContextTransitioning) {
+        if let menu = context.viewController(forKey: UITransitionContextViewControllerKey.from) {
+            animate(menu as! Menu, startAngle: 0, endAngle: angle) {
                 menu.view.removeFromSuperview()
                 context.completeTransition(true)
             }
         }
     }
-
-    private func animateMenu(menu: Menu, startAngle: CGFloat, endAngle: CGFloat, completion: () -> Void) {
+    
+    fileprivate func animate(_ menu: Menu, startAngle: CGFloat, endAngle: CGFloat, completion: @escaping () -> Void) {
         let animator = MenuItemsAnimator(views: menu.menuItems, startAngle: startAngle, endAngle: endAngle)
         animator.duration = duration
         animator.completion = completion
         animator.start()
     }
 }
-//MARK: Extensions
+
 extension MenuTransitionAnimator: UIViewControllerAnimatedTransitioning {
-    public func animateTransition(context: UIViewControllerContextTransitioning) {
+    
+    public func animateTransition(using context: UIViewControllerContextTransitioning) {
         switch mode {
-            case .Presentation:
-                animatePresentation(context)
-            case .Dismissal:
-                animateDismissal(context)
+        case .presentation:
+            animatePresentation(using: context)
+        case .dismissal:
+            animateDismissal(using: context)
         }
     }
-
-    public func transitionDuration(context: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    
+    public func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
 }

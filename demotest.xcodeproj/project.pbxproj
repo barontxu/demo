@@ -17,9 +17,18 @@
 		BF0D46A41D50A3DC00151702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0D46A21D50A3DC00151702 /* LaunchScreen.storyboard */; };
 		BF0D46AF1D50A3DC00151702 /* demotestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D46AE1D50A3DC00151702 /* demotestTests.swift */; };
 		BF0D46BA1D50A3DC00151702 /* demotestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D46B91D50A3DC00151702 /* demotestUITests.swift */; };
+		BF1A9AD11D8D7F1500A32B3B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A9AD01D8D7F1500A32B3B /* MenuViewController.swift */; };
+		BF1A9AD31D8DD99000A32B3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A9AD21D8DD99000A32B3B /* MainViewController.swift */; };
+		BF2F481F1DCA2BC0003C5ED9 /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F481E1DCA2BC0003C5ED9 /* TimerHandler.swift */; };
+		BF3A828A1DBFA0BD00D60628 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A82891DBFA0BD00D60628 /* UITableViewCell.swift */; };
+		BF3A82901DBFA38000D60628 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A828C1DBFA38000D60628 /* AnimationDelegate.swift */; };
+		BF3A82921DBFA38000D60628 /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A828E1DBFA38000D60628 /* CircularRevealAnimator.swift */; };
+		BF3A82931DBFA38000D60628 /* CircularRevealTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A828F1DBFA38000D60628 /* CircularRevealTransitionAnimator.swift */; };
+		BF3A82951DBFAD5C00D60628 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A82941DBFAD5C00D60628 /* ContentViewController.swift */; };
 		BF3AE5371D85D6920075345D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AE5341D85D6920075345D /* Menu.swift */; };
 		BF3AE5381D85D6920075345D /* MenuItemsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AE5351D85D6920075345D /* MenuItemsAnimator.swift */; };
 		BF3AE5391D85D6920075345D /* MenuTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AE5361D85D6920075345D /* MenuTransitionAnimator.swift */; };
+		BF91603F1DD9E62000728DAB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91603E1DD9E62000728DAB /* TimerView.swift */; };
 		BFE68D9F1D7933D6002AD3DE /* TKTransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68D9E1D7933D6002AD3DE /* TKTransitionSubmitButton.swift */; };
 		BFE68DA41D79340F002AD3DE /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DA01D79340F002AD3DE /* CGRectEx.swift */; };
 		BFE68DA51D79340F002AD3DE /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DA11D79340F002AD3DE /* FadeTransition.swift */; };
@@ -27,6 +36,7 @@
 		BFE68DA71D79340F002AD3DE /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DA31D79340F002AD3DE /* SpinerLayer.swift */; };
 		BFE68DA91D796F70002AD3DE /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DA81D796F70002AD3DE /* TimerViewController.swift */; };
 		BFE68DAB1D796F80002AD3DE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DAA1D796F80002AD3DE /* InfoViewController.swift */; };
+		BFFF14CF1DC9D4BA00FEDC89 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF14CE1DC9D4BA00FEDC89 /* config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,26 +57,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13039FC3EC7D26ABEDB064AD /* Pods-demotestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotestTests/Pods-demotestTests.release.xcconfig"; sourceTree = "<group>"; };
-		3E8A40752931CDF8E7116E4E /* Pods-demotest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotest.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotest/Pods-demotest.release.xcconfig"; sourceTree = "<group>"; };
+		3A936C49823CAAF7A04D0DEA /* Pods-demotest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotest/Pods-demotest.debug.xcconfig"; sourceTree = "<group>"; };
 		433E9CC924184D0D420029AD /* Pods_demotest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demotest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B06B29C3D6FBCC189E5B88EB /* Pods-demotest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotest/Pods-demotest.debug.xcconfig"; sourceTree = "<group>"; };
+		609A85847AFA342F862107DF /* Pods-demotestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotestTests/Pods-demotestTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BB3DC1288CB2012539D7327 /* Pods-demotestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotestTests/Pods-demotestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0D46961D50A3DC00151702 /* demotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D46991D50A3DC00151702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0D469B1D50A3DC00151702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF0D469E1D50A3DC00151702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF0D46A01D50A3DC00151702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = demotest/Assets.xcassets; sourceTree = "<group>"; };
 		BF0D46A31D50A3DC00151702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF0D46A51D50A3DC00151702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0D46A51D50A3DC00151702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = demotest/Info.plist; sourceTree = "<group>"; };
 		BF0D46AA1D50A3DC00151702 /* demotestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demotestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D46AE1D50A3DC00151702 /* demotestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demotestTests.swift; sourceTree = "<group>"; };
 		BF0D46B01D50A3DC00151702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF0D46B51D50A3DC00151702 /* demotestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demotestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D46B91D50A3DC00151702 /* demotestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demotestUITests.swift; sourceTree = "<group>"; };
 		BF0D46BB1D50A3DC00151702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF1A9AD01D8D7F1500A32B3B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BF1A9AD21D8DD99000A32B3B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BF2F481E1DCA2BC0003C5ED9 /* TimerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
+		BF3A82891DBFA0BD00D60628 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		BF3A828C1DBFA38000D60628 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationDelegate.swift; path = Misc/AnimationDelegate.swift; sourceTree = "<group>"; };
+		BF3A828E1DBFA38000D60628 /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularRevealAnimator.swift; path = Misc/CircularRevealAnimator.swift; sourceTree = "<group>"; };
+		BF3A828F1DBFA38000D60628 /* CircularRevealTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularRevealTransitionAnimator.swift; path = Misc/CircularRevealTransitionAnimator.swift; sourceTree = "<group>"; };
+		BF3A82941DBFAD5C00D60628 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BF3AE5341D85D6920075345D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		BF3AE5351D85D6920075345D /* MenuItemsAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsAnimator.swift; sourceTree = "<group>"; };
 		BF3AE5361D85D6920075345D /* MenuTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionAnimator.swift; sourceTree = "<group>"; };
+		BF91603E1DD9E62000728DAB /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BFE68D9E1D7933D6002AD3DE /* TKTransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKTransitionSubmitButton.swift; sourceTree = "<group>"; };
 		BFE68DA01D79340F002AD3DE /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
 		BFE68DA11D79340F002AD3DE /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -74,11 +93,12 @@
 		BFE68DA31D79340F002AD3DE /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
 		BFE68DA81D796F70002AD3DE /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BFE68DAA1D796F80002AD3DE /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		CB848B9A6125DD418E3F7311 /* Pods-demotestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotestTests/Pods-demotestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFFF14CE1DC9D4BA00FEDC89 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		CD5A567D256CF8621D4A30CB /* Pods_demotestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demotestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFECB8A3B5C9DE6D0B3FE0D6 /* Pods-demotestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotestUITests/Pods-demotestUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D0E5B3B6A9DFAB9ABA975819 /* Pods-demotestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotestUITests/Pods-demotestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5ED02D8252DD7A40A6FF3C9 /* Pods_demotestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demotestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE362FF6C912459FEFE6B97B /* Pods-demotestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotestUITests/Pods-demotestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F05FFAD3388CAD8F0F6BA427 /* Pods-demotest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotest.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotest/Pods-demotest.release.xcconfig"; sourceTree = "<group>"; };
+		F55FEF6F58CCDD8229E8240F /* Pods-demotestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotestUITests/Pods-demotestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +136,8 @@
 				BF0D46AD1D50A3DC00151702 /* demotestTests */,
 				BF0D46B81D50A3DC00151702 /* demotestUITests */,
 				BF0D46971D50A3DC00151702 /* Products */,
-				F5CBC1825B61DA67CDD1644D /* Pods */,
 				F2BE487AE7197C8AF3A0DAFF /* Frameworks */,
+				E300D6325D8B7A770A53EF41 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,15 +154,13 @@
 		BF0D46981D50A3DC00151702 /* demotest */ = {
 			isa = PBXGroup;
 			children = (
+				BFFF14CE1DC9D4BA00FEDC89 /* config.swift */,
+				BF8002941DC625A50081810E /* main */,
+				BF8002931DC6258E0081810E /* login */,
 				BFE68D9D1D747255002AD3DE /* components */,
-				BFE68D9C1D746DB1002AD3DE /* supporting files */,
 				BF0D46991D50A3DC00151702 /* AppDelegate.swift */,
-				BF0D469B1D50A3DC00151702 /* ViewController.swift */,
-				BFE68DA81D796F70002AD3DE /* TimerViewController.swift */,
-				BFE68DAA1D796F80002AD3DE /* InfoViewController.swift */,
-				BF0D469D1D50A3DC00151702 /* Main.storyboard */,
-				BF0D46A21D50A3DC00151702 /* LaunchScreen.storyboard */,
-				BF0D46A51D50A3DC00151702 /* Info.plist */,
+				BF3A82941DBFAD5C00D60628 /* ContentViewController.swift */,
+				BFE68D9C1D746DB1002AD3DE /* supporting files */,
 			);
 			path = demotest;
 			sourceTree = "<group>";
@@ -165,6 +183,16 @@
 			path = demotestUITests;
 			sourceTree = "<group>";
 		};
+		BF3A828B1DBFA37300D60628 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				BF3A828C1DBFA38000D60628 /* AnimationDelegate.swift */,
+				BF3A828E1DBFA38000D60628 /* CircularRevealAnimator.swift */,
+				BF3A828F1DBFA38000D60628 /* CircularRevealTransitionAnimator.swift */,
+			);
+			name = misc;
+			sourceTree = "<group>";
+		};
 		BF3AE5321D85C8DA0075345D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +206,7 @@
 		BF3AE5331D85C90F0075345D /* MenuSideBar */ = {
 			isa = PBXGroup;
 			children = (
+				BF3A828B1DBFA37300D60628 /* misc */,
 				BF3AE5341D85D6920075345D /* Menu.swift */,
 				BF3AE5351D85D6920075345D /* MenuItemsAnimator.swift */,
 				BF3AE5361D85D6920075345D /* MenuTransitionAnimator.swift */,
@@ -185,10 +214,52 @@
 			name = MenuSideBar;
 			sourceTree = "<group>";
 		};
+		BF8002921DC5F45A0081810E /* extend */ = {
+			isa = PBXGroup;
+			children = (
+				BF3A82891DBFA0BD00D60628 /* UITableViewCell.swift */,
+				BFE68DA01D79340F002AD3DE /* CGRectEx.swift */,
+				BFE68DA21D79340F002AD3DE /* NSTimerEx.swift */,
+			);
+			name = extend;
+			sourceTree = "<group>";
+		};
+		BF8002931DC6258E0081810E /* login */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D469B1D50A3DC00151702 /* ViewController.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		BF8002941DC625A50081810E /* main */ = {
+			isa = PBXGroup;
+			children = (
+				BF91603D1DD9E50600728DAB /* Timer */,
+				BF1A9AD21D8DD99000A32B3B /* MainViewController.swift */,
+				BFE68DAA1D796F80002AD3DE /* InfoViewController.swift */,
+				BF1A9AD01D8D7F1500A32B3B /* MenuViewController.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		BF91603D1DD9E50600728DAB /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				BF91603E1DD9E62000728DAB /* TimerView.swift */,
+				BF2F481E1DCA2BC0003C5ED9 /* TimerHandler.swift */,
+				BFE68DA81D796F70002AD3DE /* TimerViewController.swift */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
 		BFE68D9C1D746DB1002AD3DE /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BF0D469D1D50A3DC00151702 /* Main.storyboard */,
 				BF0D46A01D50A3DC00151702 /* Assets.xcassets */,
+				BF0D46A21D50A3DC00151702 /* LaunchScreen.storyboard */,
+				BF0D46A51D50A3DC00151702 /* Info.plist */,
 			);
 			name = "supporting files";
 			path = ..;
@@ -197,12 +268,24 @@
 		BFE68D9D1D747255002AD3DE /* components */ = {
 			isa = PBXGroup;
 			children = (
+				BF8002921DC5F45A0081810E /* extend */,
 				BF3AE5331D85C90F0075345D /* MenuSideBar */,
 				BF3AE5321D85C8DA0075345D /* Login */,
-				BFE68DA01D79340F002AD3DE /* CGRectEx.swift */,
-				BFE68DA21D79340F002AD3DE /* NSTimerEx.swift */,
 			);
 			name = components;
+			sourceTree = "<group>";
+		};
+		E300D6325D8B7A770A53EF41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A936C49823CAAF7A04D0DEA /* Pods-demotest.debug.xcconfig */,
+				F05FFAD3388CAD8F0F6BA427 /* Pods-demotest.release.xcconfig */,
+				7BB3DC1288CB2012539D7327 /* Pods-demotestTests.debug.xcconfig */,
+				609A85847AFA342F862107DF /* Pods-demotestTests.release.xcconfig */,
+				EE362FF6C912459FEFE6B97B /* Pods-demotestUITests.debug.xcconfig */,
+				F55FEF6F58CCDD8229E8240F /* Pods-demotestUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F2BE487AE7197C8AF3A0DAFF /* Frameworks */ = {
@@ -213,19 +296,6 @@
 				E5ED02D8252DD7A40A6FF3C9 /* Pods_demotestUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F5CBC1825B61DA67CDD1644D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B06B29C3D6FBCC189E5B88EB /* Pods-demotest.debug.xcconfig */,
-				3E8A40752931CDF8E7116E4E /* Pods-demotest.release.xcconfig */,
-				CB848B9A6125DD418E3F7311 /* Pods-demotestTests.debug.xcconfig */,
-				13039FC3EC7D26ABEDB064AD /* Pods-demotestTests.release.xcconfig */,
-				CFECB8A3B5C9DE6D0B3FE0D6 /* Pods-demotestUITests.debug.xcconfig */,
-				D0E5B3B6A9DFAB9ABA975819 /* Pods-demotestUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +374,17 @@
 				TargetAttributes = {
 					BF0D46951D50A3DC00151702 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QHU47N533M;
+						LastSwiftMigration = 0800;
 					};
 					BF0D46A91D50A3DC00151702 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = BF0D46951D50A3DC00151702;
 					};
 					BF0D46B41D50A3DC00151702 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = BF0D46951D50A3DC00151702;
 					};
 				};
@@ -490,17 +564,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3A828A1DBFA0BD00D60628 /* UITableViewCell.swift in Sources */,
 				BFE68D9F1D7933D6002AD3DE /* TKTransitionSubmitButton.swift in Sources */,
 				BFE68DA61D79340F002AD3DE /* NSTimerEx.swift in Sources */,
 				BFE68DA71D79340F002AD3DE /* SpinerLayer.swift in Sources */,
+				BF3A82921DBFA38000D60628 /* CircularRevealAnimator.swift in Sources */,
 				BFE68DA51D79340F002AD3DE /* FadeTransition.swift in Sources */,
+				BF91603F1DD9E62000728DAB /* TimerView.swift in Sources */,
 				BF3AE5371D85D6920075345D /* Menu.swift in Sources */,
 				BF3AE5381D85D6920075345D /* MenuItemsAnimator.swift in Sources */,
 				BFE68DAB1D796F80002AD3DE /* InfoViewController.swift in Sources */,
+				BF3A82951DBFAD5C00D60628 /* ContentViewController.swift in Sources */,
+				BF1A9AD31D8DD99000A32B3B /* MainViewController.swift in Sources */,
+				BF1A9AD11D8D7F1500A32B3B /* MenuViewController.swift in Sources */,
 				BFE68DA91D796F70002AD3DE /* TimerViewController.swift in Sources */,
+				BF2F481F1DCA2BC0003C5ED9 /* TimerHandler.swift in Sources */,
+				BFFF14CF1DC9D4BA00FEDC89 /* config.swift in Sources */,
 				BF0D469C1D50A3DC00151702 /* ViewController.swift in Sources */,
 				BFE68DA41D79340F002AD3DE /* CGRectEx.swift in Sources */,
+				BF3A82901DBFA38000D60628 /* AnimationDelegate.swift in Sources */,
 				BF3AE5391D85D6920075345D /* MenuTransitionAnimator.swift in Sources */,
+				BF3A82931DBFA38000D60628 /* CircularRevealTransitionAnimator.swift in Sources */,
 				BF0D469A1D50A3DC00151702 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +627,7 @@
 				BF0D469E1D50A3DC00151702 /* Base */,
 			);
 			name = Main.storyboard;
+			path = demotest;
 			sourceTree = "<group>";
 		};
 		BF0D46A21D50A3DC00151702 /* LaunchScreen.storyboard */ = {
@@ -551,6 +636,7 @@
 				BF0D46A31D50A3DC00151702 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = demotest;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -643,74 +729,84 @@
 		};
 		BF0D46BF1D50A3DC00151702 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B06B29C3D6FBCC189E5B88EB /* Pods-demotest.debug.xcconfig */;
+			baseConfigurationReference = 3A936C49823CAAF7A04D0DEA /* Pods-demotest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QHU47N533M;
 				INFOPLIST_FILE = demotest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mino.demotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		BF0D46C01D50A3DC00151702 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E8A40752931CDF8E7116E4E /* Pods-demotest.release.xcconfig */;
+			baseConfigurationReference = F05FFAD3388CAD8F0F6BA427 /* Pods-demotest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QHU47N533M;
 				INFOPLIST_FILE = demotest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mino.demotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		BF0D46C21D50A3DC00151702 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB848B9A6125DD418E3F7311 /* Pods-demotestTests.debug.xcconfig */;
+			baseConfigurationReference = 7BB3DC1288CB2012539D7327 /* Pods-demotestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = demotestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mino.demotestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demotest.app/demotest";
 			};
 			name = Debug;
 		};
 		BF0D46C31D50A3DC00151702 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13039FC3EC7D26ABEDB064AD /* Pods-demotestTests.release.xcconfig */;
+			baseConfigurationReference = 609A85847AFA342F862107DF /* Pods-demotestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = demotestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mino.demotestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demotest.app/demotest";
 			};
 			name = Release;
 		};
 		BF0D46C51D50A3DC00151702 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFECB8A3B5C9DE6D0B3FE0D6 /* Pods-demotestUITests.debug.xcconfig */;
+			baseConfigurationReference = EE362FF6C912459FEFE6B97B /* Pods-demotestUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = demotestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mino.demotestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = demotest;
 			};
 			name = Debug;
 		};
 		BF0D46C61D50A3DC00151702 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0E5B3B6A9DFAB9ABA975819 /* Pods-demotestUITests.release.xcconfig */;
+			baseConfigurationReference = F55FEF6F58CCDD8229E8240F /* Pods-demotestUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = demotestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mino.demotestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = demotest;
 			};
 			name = Release;
