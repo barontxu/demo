@@ -37,7 +37,6 @@ extension TimerView {
         
     }
     
-    
 }
 
 
@@ -50,9 +49,9 @@ extension TimerView {
         let heights = view_heights()
         let origins = view_origins()
         
-        let up_view = get_view_with_bg_color(origins[0], width: width, height: heights[0], colors: CONFIG.up_colors)
-        let mid_view = get_view_with_bg_color(origins[1], width: width, height: heights[1], colors: CONFIG.mid_colors)
-        let bottom_view = get_view_with_bg_color(origins[2], width: width, height: heights[2], colors: CONFIG.bottom_colors)
+        let up_view = get_view_with_bg_color(origins[0], width: width, height: heights[0], colors: timerConfig.up_colors)
+        let mid_view = get_view_with_bg_color(origins[1], width: width, height: heights[1], colors: timerConfig.mid_colors)
+        let bottom_view = get_view_with_bg_color(origins[2], width: width, height: heights[2], colors: timerConfig.bottom_colors)
         
         self.up_back_view = up_view
         self.mid_back_view = mid_view
@@ -66,8 +65,8 @@ extension TimerView {
     func view_heights() -> [CGFloat] {
         let view_frame = self.frame
         
-        let otmp = CONFIG.offset_to_mid_percentage
-        let otbp: CGFloat = CONFIG.stage1.offset_to_buttom_percentage
+        let otmp = timerConfig.offset_to_mid_percentage
+        let otbp: CGFloat = timerConfig.stage1.offset_to_buttom_percentage
         
         let up_height = otmp * view_frame.height
         let mid_height = (otbp - otmp) * view_frame.height
@@ -81,8 +80,8 @@ extension TimerView {
         
         let view_origin = view_frame.origin
         
-        let otmp = CONFIG.offset_to_mid_percentage
-        let otbp = CONFIG.stage1.offset_to_buttom_percentage
+        let otmp = timerConfig.offset_to_mid_percentage
+        let otbp = timerConfig.stage1.offset_to_buttom_percentage
         
         let up_origin = view_origin
         let mid_origin = CGPoint(x: 0, y: otmp * view_frame.height)

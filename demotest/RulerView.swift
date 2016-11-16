@@ -10,12 +10,23 @@ import UIKit
 
 class RulerView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var settings        : RaterSettings = RaterSettings()
+    var color_paras     : [CGFloat]?
+    
+    override func didMoveToSuperview() {
+        self.backgroundColor = UIColor.clear
     }
-    */
+    
+    override func draw(_ rect: CGRect) {
+        let cntx = UIGraphicsGetCurrentContext()
+        cntx?.drawRuler(settings)
+//        if let cp = color_paras {
+//            cntx?.drawRuler(settings, color_paras: cp)
+//        } else {
+//            cntx?.drawRuler(settings)
+//        }
+        super.draw(rect)
+    }
+    
 
 }
