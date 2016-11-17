@@ -15,14 +15,14 @@ class RaterScrollView: UIScrollView {
 
     override func willMove(toSuperview newSuperview: UIView?) {
         if newSuperview != nil{
+            print(newSuperview)
             setupGUI()
         }
     }
-
     
     func setupGUI() {
         self.showsHorizontalScrollIndicator = false
-        self.showsVerticalScrollIndicator = true
+        self.showsVerticalScrollIndicator = false
         self.bounces = false
         self.contentInset = UIEdgeInsetsMake(self.frame.size.height/2 - settings.thickLine/2.0, 0, self.frame.size.height/2 - settings.thickLine/2.0, 0)
         

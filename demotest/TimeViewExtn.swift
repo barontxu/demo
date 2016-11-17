@@ -65,7 +65,7 @@ extension TimerView {
     func view_heights() -> [CGFloat] {
         let view_frame = self.frame
         
-        let otmp = timerConfig.offset_to_mid_percentage
+        let otmp = timerConfig.stage1.offset_to_mid_percentage
         let otbp: CGFloat = timerConfig.stage1.offset_to_buttom_percentage
         
         let up_height = otmp * view_frame.height
@@ -80,7 +80,7 @@ extension TimerView {
         
         let view_origin = view_frame.origin
         
-        let otmp = timerConfig.offset_to_mid_percentage
+        let otmp = timerConfig.stage1.offset_to_mid_percentage
         let otbp = timerConfig.stage1.offset_to_buttom_percentage
         
         let up_origin = view_origin

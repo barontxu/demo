@@ -20,11 +20,11 @@ class RulerView: UIView {
     override func draw(_ rect: CGRect) {
         let cntx = UIGraphicsGetCurrentContext()
         cntx?.drawRuler(settings)
-//        if let cp = color_paras {
-//            cntx?.drawRuler(settings, color_paras: cp)
-//        } else {
-//            cntx?.drawRuler(settings)
-//        }
+        if let cp = color_paras {
+            cntx?.drawRuler(settings, color_paras: cp)
+        } else {
+            cntx?.drawRuler(settings)
+        }
         super.draw(rect)
     }
     

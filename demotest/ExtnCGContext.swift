@@ -22,23 +22,28 @@ extension CGContext {
     }
     
     func drawRuler(_ settings: RaterSettings,
-                   color_paras: [CGFloat] = [181/255.0, 181/255.0, 181/255.0, 1.0]) {
+                   color_paras: [CGFloat] = [181/255.0, 181/255.0, 181/255.0, 0]) {
+        
         for i in 0 ..< settings.numberOfSteps + 1{
-            
             self.setStrokeColor(red: color_paras[0], green: color_paras[1], blue: color_paras[2], alpha: color_paras[3])
+            
             var x : CGFloat
             if i %  settings.bigStep == 0{
                 self.setLineWidth(settings.thickLine)
                 x = settings.thickLineWidth
-            }
-            else{
+            } else {
                 self.setLineWidth(settings.skinLine)
                 x =  settings.skinLineWidth
             }
             
-            self.move(to: CGPoint(x: 0, y: settings.thickLine/2.0 + CGFloat(i) * settings.separator))
-            self.addLine(to: CGPoint(x: x, y: settings.thickLine/2.0 +  CGFloat(i) * settings.separator))
+            let line_y  : CGFloat = settings.thickLine/2.0 + CGFloat(i) * settings.separator
+            let frame_width : CGFloat = CGFloat(width) * 0.5
+            
+            self.move(to: CGPoint(x: frame_width-x, y: line_y))
+            self.addLine(to: CGPoint(x: frame_width, y: line_y))
+            
             self.strokePath()
         }
+        
     }
 }
