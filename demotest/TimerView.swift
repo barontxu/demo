@@ -16,9 +16,9 @@ class TimerView: UIView, UIScrollViewDelegate {
     var settings            : RaterSettings = RaterSettings()
     
     
-    var up_back_view        : UIView?
-    var mid_back_view       : UIView?
-    var bottom_back_view    : UIView?
+    var up_back_view        : UIView!
+    var mid_back_view       : UIView!
+    var bottom_back_view    : UIView!
 
     var completition        : ((CGFloat) -> ())?
 
