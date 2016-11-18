@@ -258,9 +258,6 @@
 				BFE68DA81D796F70002AD3DE /* TimerViewController.swift */,
 				BF91603E1DD9E62000728DAB /* TimerView.swift */,
 				BFD2EC801DDB374900FEDEF7 /* TimeViewExtn.swift */,
-				BFD2EC861DDB515100FEDEF7 /* RaterScrollView.swift */,
-				BFD2EC821DDB3B0100FEDEF7 /* RulerView.swift */,
-				BFD2EC841DDB474500FEDEF7 /* ExtnCGContext.swift */,
 				BF2F481E1DCA2BC0003C5ED9 /* TimerHandler.swift */,
 			);
 			name = Timer;
@@ -269,6 +266,9 @@
 		BFD2EC881DDDF50300FEDEF7 /* RaterScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				BFD2EC861DDB515100FEDEF7 /* RaterScrollView.swift */,
+				BFD2EC821DDB3B0100FEDEF7 /* RulerView.swift */,
+				BFD2EC841DDB474500FEDEF7 /* ExtnCGContext.swift */,
 			);
 			name = RaterScrollView;
 			sourceTree = "<group>";

@@ -28,6 +28,9 @@ struct TimerConfig {
         let offset_to_buttom_percentage             : CGFloat = 463.0 / 463
         let offset_to_mid_percentage                : CGFloat = 148.0 / 463
         
+        //160 206 463
+        let time_set_frame_offset_range             : [CGFloat] = [160.0 / 463, 206.0 / 463]
+        let gold_set_frame_offset_range             : [CGFloat] = [206.0 / 463, 252.0 / 463]
         
     }
     

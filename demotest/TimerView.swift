@@ -44,7 +44,8 @@ class TimerView: UIView, UIScrollViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         print("BeginDragging")
-        print(scrollView.panGestureRecognizer.location(in: self))
+        var touch_pos :CGPoint =  scrollView.panGestureRecognizer.location(in: self)
+        
         self.raterScrollView.contentOffset = CGPoint(x: 0.0, y: 19.5)
         self.raterScrollView.ruler.color_paras = [CGFloat(181.0/255.0), CGFloat(181.0/255.0), CGFloat(181.0/255.0), 1.0]
         self.raterScrollView.ruler.setNeedsDisplay()
