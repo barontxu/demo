@@ -57,9 +57,9 @@ extension TimerView {
         self.mid_back_view = mid_view
         self.bottom_back_view = bottom_view
         
-        self.addSubview(self.up_back_view!)
         self.addSubview(self.mid_back_view!)
         self.addSubview(self.bottom_back_view!)
+        self.addSubview(self.up_back_view!)
     }
     
     func view_heights() -> [CGFloat] {
