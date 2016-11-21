@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "demotest/TimerView.swift"
-            timestampString = "501238698.082234"
+            timestampString = "501359920.001144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "willMove(toSuperview:)"
             landmarkType = "7">
          </BreakpointContent>

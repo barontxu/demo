@@ -12,6 +12,13 @@ class TimerViewController: UIViewController {
 
     let CONFIG = TimerConfig()
     
+    @IBOutlet weak var testButton: UIButton!
+    
+    @IBAction func testAction(_ sender: Any) {
+        let tmV = self.view as! TimerView
+        tmV.do_anime()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +28,7 @@ class TimerViewController: UIViewController {
         settings.separator = 14.0
         rater.settings = settings
         rater.completition = { print($0) }
+        view.bringSubview(toFront: testButton)
     }
 
     override func didReceiveMemoryWarning() {

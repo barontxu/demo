@@ -259,8 +259,8 @@
 				BFD2EC881DDDF50300FEDEF7 /* RaterScrollView */,
 				BFE68DA81D796F70002AD3DE /* TimerViewController.swift */,
 				BF91603E1DD9E62000728DAB /* TimerView.swift */,
-				BFD2EC801DDB374900FEDEF7 /* TimeViewExtn.swift */,
 				BFD2EC891DDF319300FEDEF7 /* ValueSetter.swift */,
+				BFD2EC801DDB374900FEDEF7 /* TimeViewExtn.swift */,
 				BF2F481E1DCA2BC0003C5ED9 /* TimerHandler.swift */,
 			);
 			name = Timer;

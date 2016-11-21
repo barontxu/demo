@@ -41,7 +41,7 @@ class ValueSetter: UIView {
         }
         
         type_label = UILabel(frame: CGRect(x: 100, y: 7, width: 400, height: 30))
-        type_label.font = UIFont.systemFont(ofSize: 15)
+        type_label.font = UIFont.boldSystemFont(ofSize: 15)
         type_label.text = type_text
         type_label.textColor = UIColor.white
         self.addSubview(type_label)
@@ -52,8 +52,7 @@ class ValueSetter: UIView {
         value_label.textColor = UIColor.white
         self.addSubview(value_label)
         
-        print(bounds.height)
-        var lineViewBottom = UIView(frame: CGRect(x: 20, y: bounds.height+1, width: bounds.width-40, height: 1.0))
+        let lineViewBottom = UIView(frame: CGRect(x: 20, y: bounds.height+1, width: bounds.width-40, height: 1.0))
         lineViewBottom.layer.borderWidth = 1.0
         lineViewBottom.layer.borderColor = UIColor.gray.cgColor
         
