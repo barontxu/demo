@@ -35,8 +35,11 @@ class MainViewController: UIViewController {
         case (.some("embedNavigator"), let navigator as UINavigationController):
             self.navigator = navigator
             self.navigator.delegate = self
-            let detail = storyboard!.instantiateViewController(withIdentifier: "Timer")
-            self.navigator.setViewControllers([detail], animated: false)
+            let timer = storyboard!.instantiateViewController(withIdentifier: "Timer")
+            let detail = storyboard!.instantiateViewController(withIdentifier: "Info")
+            print("11~~~~~~~~~~~~")
+            print(timer.view.frame)
+            self.navigator.setViewControllers([detail, timer], animated: false)
         default:
             super.prepare(for: segue, sender: sender)
         }
@@ -50,8 +53,12 @@ extension MainViewController: MenuViewControllerDelegate {
         
         let detail = storyboard!.instantiateViewController(withIdentifier: "Info")
         let timer = storyboard!.instantiateViewController(withIdentifier: "Timer")
-
-        
+        print("~~~~~~~~~~~~~")
+        print(timer.view.frame)
+        timer.view.frame = self.view.frame
+        print(timer.view.frame)
+        print(self.view.frame)
+        print("~~~~~~~~~~~~~")
         if index % 2 == 0 {
             self.navigator.setViewControllers([detail, timer], animated: true)
         } else {

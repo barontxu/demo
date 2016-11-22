@@ -24,6 +24,9 @@ class TimerView: UIView, UIScrollViewDelegate {
     var mid_back_view       : UIView!
     var bottom_back_view    : UIView!
     
+    //button animation layer
+    var button_anim_layer   : ButtonAnimeLayer!
+    
     // stage information
     var stage               : Int!
     
@@ -39,12 +42,16 @@ class TimerView: UIView, UIScrollViewDelegate {
     var completition        : ((CGFloat) -> ())?
 
     override func willMove(toSuperview newSuperview: UIView?) {
+        print("))))))))")
+        print(frame)
+        print("))))))))")
         stage = 1
         add_three_background_views()
         set_decorations()
         
         let stage1 = timerConfig.stage1
         
+        // add duration and gold setter
         duration_y_range = stage1.duration_set_frame_offset_range.map{$0 * bounds.height}
         gold_y_range = stage1.gold_set_frame_offset_range.map{$0 * bounds.height}
         
@@ -59,12 +66,36 @@ class TimerView: UIView, UIScrollViewDelegate {
         self.insertSubview(duration_view, belowSubview: up_back_view)
         self.insertSubview(gold_view, belowSubview: up_back_view)
         
+        // add ruler view
         if newSuperview != nil {
             raterScrollView = RaterScrollView(frame: self.bounds)
             raterScrollView.settings = settings
             raterScrollView.delegate = self
             self.addSubview(raterScrollView)
         }
+        
+        //add button and button anime layer
+        button_anim_layer = ButtonAnimeLayer(superRect: frame)
+        
+        button_anim_layer.setAnimeDuration(0.5)
+        
+        button_anim_layer.setAnimeCenterX(0.5) // 动画整体X坐标，取值0～1， 0为目标视图左边界，1为右边界。
+        
+        button_anim_layer.setLargeCircleRadius(0.5) // 大圆半径，取值0～1， 1为半个横视图距离。
+        button_anim_layer.setLargeCircleCenterY(0.2) // 大圆中心位置垂直分量，取值0～1， 0为目标视图上边界，1为下边界。
+        
+        button_anim_layer.setSmallCircleRadius(0.3)  // 小圆半径，取值0～1， 1为半个横屏幕距离。
+        button_anim_layer.setSmallCircleCenterY(0.8)  // 小圆中心位置垂直分量，取值0～1， 0为目标视图上边界，1为下边界。
+        
+        button_anim_layer.fillColor = UIColor(red: 110.0 / 255, green: 209.0 / 255, blue: 157.0 / 255, alpha: 1.0).cgColor
+        button_anim_layer.strokeColor = UIColor.white.cgColor
+        button_anim_layer.lineWidth = 3
+        
+        let animeView = UIView()
+
+        animeView.layer.addSublayer(button_anim_layer)
+        self.insertSubview(animeView, belowSubview: gold_view)
+        
         self.bringSubview(toFront: testbutton)
         
     }
@@ -73,8 +104,16 @@ class TimerView: UIView, UIScrollViewDelegate {
         let setterMove = CABasicAnimation(keyPath: "position.y")
         setterMove.fromValue = gold_view.frame.y + gold_view.frame.height / 2
         setterMove.toValue = gold_view.frame.y - 200
-        setterMove.duration = 2.0
+        setterMove.duration = 0.5
         gold_view.layer.add(setterMove, forKey: nil)
+        gold_view.frame.y = gold_view.frame.y - 200
+        
+        setterMove.fromValue = duration_view.frame.y + duration_view.frame.height / 2
+        setterMove.toValue = duration_view.frame.y - 200
+        duration_view.layer.add(setterMove, forKey: nil)
+        duration_view.frame.y = duration_view.frame.y - 200
+        
+        self.button_anim_layer.anime()
     
     }
     
