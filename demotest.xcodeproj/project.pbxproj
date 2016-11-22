@@ -11,7 +11,6 @@
 		74D7FBE5CE6FCFFE02E9A14A /* Pods_demotestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5ED02D8252DD7A40A6FF3C9 /* Pods_demotestUITests.framework */; };
 		BA7D322B9D8AA654CF72EFCA /* Pods_demotest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433E9CC924184D0D420029AD /* Pods_demotest.framework */; };
 		BF02E9621DE339D400CEDC68 /* ButtonAnimeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02E9601DE339D400CEDC68 /* ButtonAnimeLayer.swift */; };
-		BF02E9631DE339D400CEDC68 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02E9611DE339D400CEDC68 /* TestView.swift */; };
 		BF0D469A1D50A3DC00151702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D46991D50A3DC00151702 /* AppDelegate.swift */; };
 		BF0D469C1D50A3DC00151702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D469B1D50A3DC00151702 /* ViewController.swift */; };
 		BF0D469F1D50A3DC00151702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0D469D1D50A3DC00151702 /* Main.storyboard */; };
@@ -36,6 +35,10 @@
 		BFD2EC851DDB474500FEDEF7 /* ExtnCGContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2EC841DDB474500FEDEF7 /* ExtnCGContext.swift */; };
 		BFD2EC871DDB515100FEDEF7 /* RaterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2EC861DDB515100FEDEF7 /* RaterScrollView.swift */; };
 		BFD2EC8A1DDF319300FEDEF7 /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2EC891DDF319300FEDEF7 /* ValueSetter.swift */; };
+		BFD31D751DE4504600AB71C6 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31D741DE4504600AB71C6 /* StartButton.swift */; };
+		BFD31D771DE4506E00AB71C6 /* EndButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31D761DE4506E00AB71C6 /* EndButton.swift */; };
+		BFD31D791DE4508D00AB71C6 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31D781DE4508D00AB71C6 /* TimeCounter.swift */; };
+		BFD31D7B1DE4509F00AB71C6 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31D7A1DE4509F00AB71C6 /* CounterView.swift */; };
 		BFE68D9F1D7933D6002AD3DE /* TKTransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68D9E1D7933D6002AD3DE /* TKTransitionSubmitButton.swift */; };
 		BFE68DA41D79340F002AD3DE /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DA01D79340F002AD3DE /* CGRectEx.swift */; };
 		BFE68DA51D79340F002AD3DE /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE68DA11D79340F002AD3DE /* FadeTransition.swift */; };
@@ -69,7 +72,6 @@
 		609A85847AFA342F862107DF /* Pods-demotestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-demotestTests/Pods-demotestTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BB3DC1288CB2012539D7327 /* Pods-demotestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demotestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demotestTests/Pods-demotestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF02E9601DE339D400CEDC68 /* ButtonAnimeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAnimeLayer.swift; sourceTree = "<group>"; };
-		BF02E9611DE339D400CEDC68 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		BF0D46961D50A3DC00151702 /* demotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D46991D50A3DC00151702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0D469B1D50A3DC00151702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,10 @@
 		BFD2EC841DDB474500FEDEF7 /* ExtnCGContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtnCGContext.swift; sourceTree = "<group>"; };
 		BFD2EC861DDB515100FEDEF7 /* RaterScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaterScrollView.swift; sourceTree = "<group>"; };
 		BFD2EC891DDF319300FEDEF7 /* ValueSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueSetter.swift; sourceTree = "<group>"; };
+		BFD31D741DE4504600AB71C6 /* StartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		BFD31D761DE4506E00AB71C6 /* EndButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndButton.swift; sourceTree = "<group>"; };
+		BFD31D781DE4508D00AB71C6 /* TimeCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
+		BFD31D7A1DE4509F00AB71C6 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		BFE68D9E1D7933D6002AD3DE /* TKTransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKTransitionSubmitButton.swift; sourceTree = "<group>"; };
 		BFE68DA01D79340F002AD3DE /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
 		BFE68DA11D79340F002AD3DE /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -147,7 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				BF02E9601DE339D400CEDC68 /* ButtonAnimeLayer.swift */,
-				BF02E9611DE339D400CEDC68 /* TestView.swift */,
+				BFD31D741DE4504600AB71C6 /* StartButton.swift */,
+				BFD31D761DE4506E00AB71C6 /* EndButton.swift */,
+				BFD31D781DE4508D00AB71C6 /* TimeCounter.swift */,
+				BFD31D7A1DE4509F00AB71C6 /* CounterView.swift */,
 			);
 			name = Button;
 			sourceTree = "<group>";
@@ -604,13 +613,15 @@
 				BF3A828A1DBFA0BD00D60628 /* UITableViewCell.swift in Sources */,
 				BFE68D9F1D7933D6002AD3DE /* TKTransitionSubmitButton.swift in Sources */,
 				BFE68DA61D79340F002AD3DE /* NSTimerEx.swift in Sources */,
-				BF02E9631DE339D400CEDC68 /* TestView.swift in Sources */,
 				BFD2EC871DDB515100FEDEF7 /* RaterScrollView.swift in Sources */,
+				BFD31D791DE4508D00AB71C6 /* TimeCounter.swift in Sources */,
 				BFE68DA71D79340F002AD3DE /* SpinerLayer.swift in Sources */,
 				BF3A82921DBFA38000D60628 /* CircularRevealAnimator.swift in Sources */,
+				BFD31D7B1DE4509F00AB71C6 /* CounterView.swift in Sources */,
 				BF02E9621DE339D400CEDC68 /* ButtonAnimeLayer.swift in Sources */,
 				BFD2EC851DDB474500FEDEF7 /* ExtnCGContext.swift in Sources */,
 				BFE68DA51D79340F002AD3DE /* FadeTransition.swift in Sources */,
+				BFD31D751DE4504600AB71C6 /* StartButton.swift in Sources */,
 				BF91603F1DD9E62000728DAB /* TimerView.swift in Sources */,
 				BFD2EC831DDB3B0100FEDEF7 /* RulerView.swift in Sources */,
 				BFD2EC8A1DDF319300FEDEF7 /* ValueSetter.swift in Sources */,
@@ -624,6 +635,7 @@
 				BFE68DA91D796F70002AD3DE /* TimerViewController.swift in Sources */,
 				BF2F481F1DCA2BC0003C5ED9 /* TimerHandler.swift in Sources */,
 				BFFF14CF1DC9D4BA00FEDC89 /* config.swift in Sources */,
+				BFD31D771DE4506E00AB71C6 /* EndButton.swift in Sources */,
 				BF0D469C1D50A3DC00151702 /* ViewController.swift in Sources */,
 				BFE68DA41D79340F002AD3DE /* CGRectEx.swift in Sources */,
 				BF3A82901DBFA38000D60628 /* AnimationDelegate.swift in Sources */,
