@@ -113,6 +113,19 @@ class TimerView: UIView, UIScrollViewDelegate {
         duration_view.layer.add(setterMove, forKey: nil)
         duration_view.frame.y = duration_view.frame.y + (reverse ? 200 : -200)
         
+        //unkown bug
+        let backMove = CABasicAnimation(keyPath: "bounds.size.height")
+        backMove.fromValue = mid_back_view.frame.height
+        backMove.toValue = mid_back_view.frame.height - 400
+        backMove.duration = 0.5
+        mid_back_view.layer.add(backMove, forKey: nil)
+        mid_back_view.frame.height -= 400
+        
+//        backMove.fromValue = bottom_back_view.frame.height
+//        backMove.fromValue = bottom_back_view.frame.height + 400
+//        bottom_back_view.layer.add(backMove, forKey: nil)
+//        bottom_back_view.frame.height += 400
+        
         if reverse {
             self.button_anim_layer.animeReverse()
         } else {
