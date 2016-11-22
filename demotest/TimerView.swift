@@ -82,7 +82,7 @@ class TimerView: UIView, UIScrollViewDelegate {
         button_anim_layer.setAnimeCenterX(0.5) // 动画整体X坐标，取值0～1， 0为目标视图左边界，1为右边界。
         
         button_anim_layer.setLargeCircleRadius(0.5) // 大圆半径，取值0～1， 1为半个横视图距离。
-        button_anim_layer.setLargeCircleCenterY(0.2) // 大圆中心位置垂直分量，取值0～1， 0为目标视图上边界，1为下边界。
+        button_anim_layer.setLargeCircleCenterY(0.5) // 大圆中心位置垂直分量，取值0～1， 0为目标视图上边界，1为下边界。
         
         button_anim_layer.setSmallCircleRadius(0.3)  // 小圆半径，取值0～1， 1为半个横屏幕距离。
         button_anim_layer.setSmallCircleCenterY(0.8)  // 小圆中心位置垂直分量，取值0～1， 0为目标视图上边界，1为下边界。
@@ -100,21 +100,24 @@ class TimerView: UIView, UIScrollViewDelegate {
         
     }
     
-    func do_anime(){
+    func do_anime(reverse: Bool = false){
         let setterMove = CABasicAnimation(keyPath: "position.y")
         setterMove.fromValue = gold_view.frame.y + gold_view.frame.height / 2
-        setterMove.toValue = gold_view.frame.y - 200
+        setterMove.toValue = gold_view.frame.y + (reverse ? 200 : -200)
         setterMove.duration = 0.5
         gold_view.layer.add(setterMove, forKey: nil)
-        gold_view.frame.y = gold_view.frame.y - 200
+        gold_view.frame.y = gold_view.frame.y + (reverse ? 200 : -200)
         
         setterMove.fromValue = duration_view.frame.y + duration_view.frame.height / 2
-        setterMove.toValue = duration_view.frame.y - 200
+        setterMove.toValue = duration_view.frame.y + (reverse ? 200 : -200)
         duration_view.layer.add(setterMove, forKey: nil)
-        duration_view.frame.y = duration_view.frame.y - 200
+        duration_view.frame.y = duration_view.frame.y + (reverse ? 200 : -200)
         
-        self.button_anim_layer.anime()
-    
+        if reverse {
+            self.button_anim_layer.animeReverse()
+        } else {
+            self.button_anim_layer.anime()
+        }
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>){

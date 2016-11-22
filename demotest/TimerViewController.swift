@@ -14,9 +14,16 @@ class TimerViewController: UIViewController {
     
     @IBOutlet weak var testButton: UIButton!
     
+    var test_counter: Int = 0
+    
     @IBAction func testAction(_ sender: Any) {
         let tmV = self.view as! TimerView
-        tmV.do_anime()
+        if test_counter % 2 == 0{
+            tmV.do_anime(reverse: false)
+        } else {
+            tmV.do_anime(reverse: true)
+        }
+        test_counter += 1
     }
     
     override func viewDidLoad() {
