@@ -99,7 +99,8 @@ extension TimerView {
         gradient.frame = view_with_bg.bounds
         gradient.colors = [colors[0].cgColor, colors[1].cgColor]
         
-        view_with_bg.layer.insertSublayer(gradient, at: 0)
+        view_with_bg.backgroundColor = colors[0]
+//        view_with_bg.layer.insertSublayer(gradient, at: 0)
         
         return view_with_bg
     }
