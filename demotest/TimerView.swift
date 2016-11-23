@@ -114,7 +114,15 @@ class TimerView: UIView, UIScrollViewDelegate {
         duration_view.frame.y = duration_view.frame.y + (reverse ? 200 : -200)
         
         UIView.animate(withDuration: 0.5, animations: {
-            self.mid_back_view.frame.height -= 100
+            if reverse {
+                self.mid_back_view.frame.height += 325
+                self.bottom_back_view.frame.height -= 325
+                self.bottom_back_view.frame.y += 325
+            } else {
+                self.mid_back_view.frame.height -= 325
+                self.bottom_back_view.frame.height += 325
+                self.bottom_back_view.frame.y -= 325
+            }
         })
         
         if reverse {
